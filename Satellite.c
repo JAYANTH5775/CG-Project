@@ -3,9 +3,8 @@
 #include <math.h>
 #include <GL/glut.h>
 
-#define PI 3.14159265358979323846
+#define PI 3.141
 
-// Planet properties
 float planetRadius = 0.5f;
 float planetPosX = 0.0f;
 float planetPosY = 0.0f;
@@ -66,7 +65,7 @@ void drawStars() {
     glEnd();
 }
 
-// Update satellite position
+
 void update(int value) {
     satelliteAngle += 0.02f;
     if (satelliteAngle > 2.0f * PI)
@@ -89,7 +88,7 @@ void display() {
     glutSwapBuffers();
 }
 
-// Reshape callback
+
 void reshape(int width, int height) {
     glViewport(0, 0, (GLsizei)width, (GLsizei)height);
     glMatrixMode(GL_PROJECTION);
