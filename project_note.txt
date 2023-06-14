@@ -1,0 +1,9 @@
+The error message you received indicates that there is an undefined reference to the 'cos' function from the GLIBC library and that there is a missing DSO (Dynamic Shared Object) in the command line.
+
+To fix this error, you need to link the math library by adding the -lm flag to the compilation command. The -lm flag tells the linker to link the math library (libm.so) which provides the necessary functions like cos, sin, etc.
+
+Here's the updated compilation command:
+
+cc satellite.c -lglut -lGL -lGLU -lm
+
+By adding the -lm flag, you should be able to compile the code successfully without the "undefined reference to symbol 'cos'" error.
